@@ -1,0 +1,133 @@
+import java.util.ArrayList;
+
+
+
+class Student {
+
+    private int id;
+
+    private String name;
+
+    private int age;
+
+
+
+    // Constructor
+
+    public Student(int id, String name, int age) {
+
+        this.id = id;
+
+        this.name = name;
+
+        this.age = age;
+
+    }
+
+
+
+    // Getters and setters
+
+    public int getId() {
+
+        return id;
+
+    }
+
+
+
+    public void setId(int id) {
+
+        this.id = id;
+
+    }
+
+
+
+    public String getName() {
+
+        return name;
+
+    }
+
+
+
+    public void setName(String name) {
+
+        this.name = name;
+
+    }
+
+
+
+    public int getAge() {
+
+        return age;
+
+    }
+
+
+
+    public void setAge(int age) {
+
+        this.age = age;
+
+    }
+
+
+
+    // toString method to print student details
+
+    @Override
+
+    public String toString() {
+
+        return "Student{" +
+
+                "id=" + id +
+
+                ", name='" + name + '\'' +
+
+                ", age=" + age +
+
+                '}';
+
+    }
+
+}
+
+
+
+public class UserDefinedCollection {
+
+    public static void main(String[] args) {
+
+        // Create an ArrayList to store Student objects
+
+        ArrayList<Student> students = new ArrayList<>();
+
+
+
+        // Add some Student objects to the ArrayList
+
+        students.add(new Student(1, "Alice", 20));
+
+        students.add(new Student(2, "Bob", 21));
+
+        students.add(new Student(3, "Charlie", 22));
+
+
+
+        // Display details of all students
+
+        System.out.println("List of students:");
+
+        for (Student student : students) {
+
+            System.out.println(student);
+
+        }
+
+    }
+
+}
