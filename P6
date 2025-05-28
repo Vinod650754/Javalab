@@ -1,0 +1,91 @@
+public class StringBufferMethodsDemo {
+
+    public static void main(String[] args) {
+
+        // Create a StringBuffer object
+
+        StringBuffer stringBuffer = new StringBuffer("Hello");
+
+
+
+        // Append method
+
+        stringBuffer.append(" World!"); // Appends " World!" to the existing string
+
+
+
+        // Insert method
+
+        stringBuffer.insert(6, ","); // Inserts ',' at index 6
+
+
+
+        // Delete method
+
+        stringBuffer.delete(5, 7); // Deletes characters from index 5 to 6 (excluding 7)
+
+
+
+        // Reverse method
+
+        stringBuffer.reverse(); // Reverses the string
+
+
+
+        // Replace method
+
+        stringBuffer.replace(6, 12, "Java"); // Replaces substring from index 6 to 11 with "Java"
+
+
+
+        // Capacity method
+
+        int capacity = stringBuffer.capacity(); // Returns the current capacity of the StringBuffer
+
+
+
+        // Length method
+
+        int length = stringBuffer.length(); // Returns the length of the string
+
+
+
+        // SetLength method
+
+        stringBuffer.setLength(5); // Sets the length of the string to 5
+
+
+
+        // EnsureCapacity method
+
+        stringBuffer.ensureCapacity(30); // Ensures that the capacity is at least 30
+
+
+
+        // TrimToSize method
+
+        stringBuffer.trimToSize(); // Trims the capacity to the current length of the string
+
+
+
+        // Displaying results
+
+        System.out.println("After append: " + stringBuffer);
+
+        System.out.println("After insert: " + stringBuffer);
+
+        System.out.println("After delete: " + stringBuffer);
+
+        System.out.println("After reverse: " + stringBuffer);
+
+        System.out.println("After replace: " + stringBuffer);
+
+        System.out.println("Capacity: " + capacity);
+
+        System.out.println("Length: " + length);
+
+        System.out.println("After setLength: " + stringBuffer);
+
+    }
+
+}
