@@ -1,0 +1,74 @@
+public class StringConstructorDemo {
+
+    public static void main(String[] args) {
+
+        // Constructor 1: Using a String literal
+
+        String str1 = "Hello";
+
+
+
+        // Constructor 2: Using a character array
+
+        char[] charArray = {'W', 'o', 'r', 'l', 'd'};
+
+        String str2 = new String(charArray);
+
+
+
+        // Constructor 3: Using a portion of a character array
+
+        String str3 = new String(charArray, 1, 3); // Starting from index 1, length 3
+
+
+
+        // Constructor 4: Using another String object
+
+        String str4 = new String(str1);
+
+
+
+        // Constructor 5: Using a byte array with default charset
+
+        byte[] byteArray = {72, 101, 108, 108, 111}; // ASCII values for "Hello"
+
+        String str5 = new String(byteArray);
+
+
+
+        // Constructor 6: Using a byte array with specific charset
+
+        byte[] byteArray2 = {87, 111, 114, 108, 100}; // ASCII values for "World"
+
+        String str6 = null;
+
+        try {
+
+            str6 = new String(byteArray2, "UTF-8");
+
+        } catch (java.io.UnsupportedEncodingException e) {
+
+            e.printStackTrace();
+
+        }
+
+
+
+        // Displaying the strings
+
+        System.out.println("String 1: " + str1);
+
+        System.out.println("String 2: " + str2);
+
+        System.out.println("String 3: " + str3);
+
+        System.out.println("String 4: " + str4);
+
+        System.out.println("String 5: " + str5);
+
+        System.out.println("String 6: " + str6);
+
+    }
+
+}
+
