@@ -1,0 +1,82 @@
+import java.util.ArrayList;
+
+import java.util.Collections;
+
+import java.util.Comparator;
+
+import java.util.Random;
+
+
+
+public class NumberSorter {
+
+    public static void main(String[] args) {
+
+        // Define range for random numbers
+
+        int min = 10;
+
+        int max = 99;
+
+
+
+        // Create ArrayList to store random numbers
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+
+
+        // Generate random numbers between min and max
+
+        Random random = new Random();
+
+        for (int i = 0; i < 10; i++) {
+
+            int randomNumber = min + random.nextInt(max - min + 1);
+
+            // Check if the number is a multiple of 2 and 5
+
+            if (randomNumber % 2 == 0 && randomNumber % 5 == 0) {
+
+                numbers.add(randomNumber);
+
+            }
+
+        }
+
+
+
+        // Display original list of numbers
+
+        System.out.println("Original list: " + numbers);
+
+
+
+        // Sort numbers according to tens place using Comparator
+
+        Collections.sort(numbers, new Comparator<Integer>() {
+
+            
+
+            public int compare(Integer num1, Integer num2) {
+
+                int tensPlace1 = num1 % 100 / 10; // Get tens place of num1
+
+                int tensPlace2 = num2 % 100 / 10; // Get tens place of num2
+
+                return tensPlace1 - tensPlace2;
+
+            }
+
+        });
+
+
+
+        // Display sorted list of numbers
+
+        System.out.println("Sorted list according to tens place: " + numbers);
+
+    }
+
+}
+
