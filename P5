@@ -1,0 +1,77 @@
+public class StringMethodsDemo {
+
+    public static void main(String[] args) {
+
+        // Character extraction methods
+
+        String str = "Hello, World!";
+
+        char charAtIndex = str.charAt(7); // Extract character at index 7
+
+        String substring = str.substring(7); // Extract substring from index 7 to end
+
+        String substring2 = str.substring(7, 12); // Extract substring from index 7 to 11
+
+
+
+        // String comparison methods
+
+        String str2 = "hello, world!";
+
+        boolean isEqual = str.equals(str2); // Compare for equality, case-sensitive
+
+        boolean isEqualIgnoreCase = str.equalsIgnoreCase(str2); // Compare for equality, ignoring case
+
+
+
+        // String search methods
+
+        boolean contains = str.contains("World"); // Check if string contains "World"
+
+        int indexOf = str.indexOf("World"); // Find index of first occurrence of "World"
+
+        int lastIndexOf = str.lastIndexOf("l"); // Find index of last occurrence of 'l'
+
+
+
+        // String modification methods
+
+        String upperCase = str.toUpperCase(); // Convert to uppercase
+
+        String lowerCase = str.toLowerCase(); // Convert to lowercase
+
+        String replace = str.replace('l', 'z'); // Replace 'l' with 'z'
+
+        String trim = "  Hello, World!  ".trim(); // Remove leading and trailing whitespace
+
+
+
+        // Displaying results
+
+        System.out.println("Character at index 7: " + charAtIndex);
+
+        System.out.println("Substring from index 7: " + substring);
+
+        System.out.println("Substring from index 7 to 11: " + substring2);
+
+        System.out.println("Are strings equal? " + isEqual);
+
+        System.out.println("Are strings equal ignoring case? " + isEqualIgnoreCase);
+
+        System.out.println("Does the string contain 'World'? " + contains);
+
+        System.out.println("Index of 'World': " + indexOf);
+
+        System.out.println("Last index of 'l': " + lastIndexOf);
+
+        System.out.println("Uppercase: " + upperCase);
+
+        System.out.println("Lowercase: " + lowerCase);
+
+        System.out.println("After replacing 'l' with 'z': " + replace);
+
+        System.out.println("Trimmed string: '" + trim + "'");
+
+    }
+
+}
